@@ -1,0 +1,53 @@
+:root{
+    --rojo:#e50914;
+    --fondo:#141414;
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+
+    box-sizing: border-box;
+    
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+    
+}
+body{
+    background-color: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*HEADER*/
+.main-header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+
+.main-header .main-nav a{
+    color:#aaa;
+    text-decoration: none;
+
+}
+
+
+.main-nav a:hover{
+    color: white;
+
+}
+
+.main-nav a.white-link{
+    color:white;
+}
+
