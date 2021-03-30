@@ -43,7 +43,9 @@ body{
 
 }
 
-
+.main-nav a{
+    padding: 0 .2em;
+}
 .main-nav a:hover{
     color: white;
 
@@ -73,6 +75,63 @@ body{
 .pelicula-principal .contenedor{
     
     margin:0 auto;
-    
+    margin-bottom: 6.25em;
 }
 
+.pelicula-principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom:0.4em;
+}
+
+.pelicula-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 60%;
+    margin-bottom: 1.25em;   
+}
+
+.pelicula-principal .boton{
+    background: rgba(0, 0, 0, .5);
+    border:none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color:#fff;
+    margin-right: 1.25em;
+    cursor:pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+
+.pelicula-principal .boton i{
+
+    margin-right: 1.25em;
+}
+
+
+@media(max-width:800px){
+    .main-header .logo{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .main-header .contenedor{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .pelicula-principal{
+        font-size: 14px;
+    }
+
+    .pelicula-principal .descripcion{
+        max-width: 100%;
+    }
+} 
