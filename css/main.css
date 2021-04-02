@@ -114,6 +114,34 @@ body{
     margin-right: 1.25em;
 }
 
+/*Carrousel*/
+/*
+.carrousel{
+    display: flex;
+}
+
+.carrousel-contenedor{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    
+}
+
+.pelicula a img{
+   width: 100%; 
+}
+*/
+
+.peliculas-recomendadas{
+    margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .carrousel{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
 
 @media(max-width:800px){
     .main-header .logo{
