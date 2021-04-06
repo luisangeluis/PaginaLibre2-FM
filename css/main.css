@@ -54,6 +54,21 @@ body{
 .main-nav a.white-link{
     color:white;
 }
+/*Contenedor titulo y controles*/
+
+.peliculas-recomendadas .contenedor-titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+    /*margin-bottom: 10px;*/
+}
+
+.peliculas-recomendadas .contenedor-titulo-controles h3{
+    color: white;
+    font-size: 30px;
+}
+
 
 /*Pelicula principal*/
 
@@ -139,6 +154,42 @@ body{
     display: flex;
     align-items: center;
     position: relative;
+}
+
+.peliculas-recomendadas .carrousel .flecha-izquierda,
+.peliculas-recomendadas .carrousel .flecha-derecha{
+    position: absolute;
+    font-size: 40px;
+    border: none;
+    background-color:rgba(0, 0, 0, .3);
+    height: 50%;
+    top: calc(50% - 25%);  
+    line-height: 40px;
+    width: 50px;
+    color:#fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.peliculas-recomendadas .carrousel .flecha-izquierda:hover,
+.peliculas-recomendadas .carrousel .flecha-derecha:hover{
+    background-color:rgba(0, 0, 0, .8);
+
+}
+.peliculas-recomendadas .carrousel .flecha-izquierda{
+    left: 0;
+}
+.peliculas-recomendadas .carrousel .flecha-derecha{
+    right: 0;
+}
+
+.peliculas-recomendadas .carrousel img{
+    width: 100%;
+}
+.carrousel-contenedor{
+    display: flex;
+   overflow: hidden; 
 }
 
 
