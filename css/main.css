@@ -69,6 +69,19 @@ body{
     font-size: 30px;
 }
 
+.peliculas-recomendadas .contenedor-titulo-controles button{
+    width: 10px;
+    height: 3px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+.peliculas-recomendadas .contenedor-titulo-controles button:hover,
+.peliculas-recomendadas .contenedor-titulo-controles button:active{
+    background-color: red;
+
+}
 
 /*Pelicula principal*/
 
@@ -130,6 +143,7 @@ body{
 }
 
 /*Carrousel*/
+
 /*
 .carrousel{
     display: flex;
@@ -150,11 +164,9 @@ body{
     margin-bottom: 70px;
 }
 
-.peliculas-recomendadas .carrousel{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
+
+
+
 
 .peliculas-recomendadas .carrousel .flecha-izquierda,
 .peliculas-recomendadas .carrousel .flecha-derecha{
@@ -186,13 +198,47 @@ body{
 
 .peliculas-recomendadas .carrousel img{
     width: 100%;
+    vertical-align: top;
 }
-.carrousel-contenedor{
+
+.peliculas-recomendadas .carrousel-contenedor{
+    /*
     display: flex;
-   overflow: hidden; 
+    overflow: hidden; 
+    padding: 20px 0;
+    width: 100%;
+
+    scroll-behavior: smooth;
+    */
+
+    display: flex;
+    /*
+    align-items: center;
+    */
+    /*
+    position: relative;
+    */
+    flex-wrap: nowrap;
 }
 
+.peliculas-recomendadas .carrousel{
+    /*
+    display: flex;
+    align-items: center;
+    position: relative;
+    */
+    width: 100%;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow: hidden;   
+}
 
+.carrousel-contenedor .pelicula{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow:  5px 5px 5px rgba(0, 0, 0, .3);
+}
 
 @media(max-width:800px){
     .main-header .logo{
@@ -212,5 +258,21 @@ body{
 
     .pelicula-principal .descripcion{
         max-width: 100%;
+    }
+
+    .peliculas-recomendadas .carrousel{
+        overflow: visible;
+    }
+
+    .peliculas-recomendadas .carrousel .carrousel-contenedor{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha,
+    .peliculas-recomendadas .flecha-derecha{
+        display: none;
     }
 } 
