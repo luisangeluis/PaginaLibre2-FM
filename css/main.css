@@ -55,7 +55,30 @@ body{
     color:white;
 }
 
+/*Contenedor titulo y controles*/
+.peliculas-recomendadas_titulo-controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end; 
+}
 
+.peliculas-recomendadas_titulo-controles h3{
+    color: white;
+    font-size: 30px;
+}
+
+.peliculas-recomendadas_titulo-controles .indicadores button{
+   width: 10px;
+   height: 3px;
+   border: none;
+   background-color: white;
+   cursor: pointer;
+   margin-right: 2px;
+}
+
+.indicadores button:hover{
+    background-color: red;
+}
 /*Pelicula principal*/
 
 .pelicula-principal{
@@ -146,13 +169,40 @@ body{
     
 }
 
+.peliculas-recomendadas .carousel_main-contenedor .flecha-izquierda:hover,
+.peliculas-recomendadas .carousel_main-contenedor .flecha-derecha:hover{
+    background-color: rgba(0,0,0,.9);
+}
+
+
 .peliculas-recomendadas .carousel_main-contenedor .flecha-izquierda{
     left: 0;
 }
 .peliculas-recomendadas .carousel_main-contenedor .flecha-derecha{
     right: 0;
 }
+/*Carousel*/
 
+.peliculas-recomendadas .carousel{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.peliculas-recomendadas .carousel .peliculas-group{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .carousel .peliculas-group .pelicula{
+    width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,.3);
+}
+
+.peliculas-recomendadas .carousel .peliculas-group .pelicula img{
+    width: 100%;
+}
 @media(max-width:800px){
     .main-header .logo{
         margin-bottom: 10px;
