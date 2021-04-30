@@ -9,14 +9,14 @@
     padding: 0;
 
     box-sizing: border-box;
-    
+
 }
 
 /*Contenedor*/
 .contenedor{
     width: 90%;
     margin: auto;
-    
+
 }
 body{
     background-color: var(--fondo);
@@ -59,7 +59,7 @@ body{
 .peliculas-recomendadas_titulo-controles{
     display: flex;
     justify-content: space-between;
-    align-items: end; 
+    align-items: end;
 }
 
 .peliculas-recomendadas_titulo-controles h3{
@@ -90,14 +90,14 @@ body{
     background-size: cover;
     background-position: center center;
     margin-bottom: 3.12em;
-    
-    display: flex;  
+
+    display: flex;
     align-items: flex-end;
-    
+
 }
 
 .pelicula-principal .contenedor{
-    
+
     margin:0 auto;
     margin-bottom: 6.25em;
 }
@@ -113,7 +113,7 @@ body{
     font-size: 1em;
     line-height: 1.75em;
     max-width: 60%;
-    margin-bottom: 1.25em;   
+    margin-bottom: 1.25em;
 }
 
 .pelicula-principal .boton{
@@ -158,15 +158,15 @@ body{
     font-size: 40px;
     color:white;
     border:none;
-    
+
     height: 50%;
-    
+
     line-height: 40px;
-    
+
     top: calc(50% - 25%);
     cursor:pointer;
     transition: .2s ease all;
-    
+
 }
 
 .peliculas-recomendadas .carousel_main-contenedor .flecha-izquierda:hover,
@@ -184,8 +184,9 @@ body{
 /*Carousel*/
 
 .peliculas-recomendadas .carousel{
-    overflow: hidden;
-    scroll-behavior: smooth;
+    /* overflow: hidden; */
+    overflow-x: scroll;
+    scroll-behavior:smooth;
     padding: 20px 0;
 }
 
@@ -195,13 +196,18 @@ body{
 }
 
 .peliculas-recomendadas .carousel .peliculas-group .pelicula{
-    width: 20%;
+    min-width: 20%;
     transition: .3s ease all;
     box-shadow: 5px 5px 10px rgba(0, 0, 0,.3);
+}
+.peliculas-recomendadas .carousel .peliculas-group .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center;
 }
 
 .peliculas-recomendadas .carousel .peliculas-group .pelicula img{
     width: 100%;
+    vertical-align: top;
 }
 @media(max-width:800px){
     .main-header .logo{
@@ -223,4 +229,19 @@ body{
         max-width: 100%;
     }
 
-} 
+    /*Carousel*/
+    .peliculas-recomendadas .carousel{
+        overflow: visible;
+    }
+    .peliculas-recomendadas .carousel .peliculas-group{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha{
+        display: none;
+    }
+
+}
