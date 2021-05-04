@@ -56,6 +56,7 @@ body{
 }
 
 /*Contenedor titulo y controles*/
+
 .peliculas-recomendadas_titulo-controles{
     display: flex;
     justify-content: space-between;
@@ -77,6 +78,9 @@ body{
 }
 
 .indicadores button:hover{
+    background-color: red;
+}
+.indicadores button.activo{
     background-color: red;
 }
 /*Pelicula principal*/
@@ -184,8 +188,8 @@ body{
 /*Carousel*/
 
 .peliculas-recomendadas .carousel{
-    /* overflow: hidden; */
-    overflow-x: scroll;
+    overflow: hidden;
+    /* overflow-x: scroll; */
     scroll-behavior:smooth;
     padding: 20px 0;
 }
