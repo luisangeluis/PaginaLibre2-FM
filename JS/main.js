@@ -39,18 +39,30 @@ btnflechaIzquierda.addEventListener('click',()=>{
 console.log(numeroPaginas);
 
 for(let i=0; i<numeroPaginas;i++){
+
     const btnIndicador = document.createElement('button');
     
     if(i==0){
         btnIndicador.classList.add('activo');
     }
+
     divIndicadores.appendChild(btnIndicador);
+
+    btnIndicador.addEventListener('click',(e)=>{
+        fila.scrollLeft = i*fila.offsetWidth;
+
+        // if(e.target.classList.contains('activo')){
+        //     console.log('hola');
+        // }
+        document.querySelector('.indicadores .activo').classList.remove('activo');
+        e.target.classList.add('activo');        
+        
+    });
+
+
 }
 
-divIndicadores.addEventListener('click',(e)=>{
-    fila.scrollLeft = 
-    console.dir(e);
-});
+
 
 
 
