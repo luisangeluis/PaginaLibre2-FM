@@ -213,6 +213,7 @@ body{
     width: 100%;
     vertical-align: top;
 }
+
 @media(max-width:800px){
     .main-header .logo{
         margin-bottom: 10px;
@@ -234,7 +235,7 @@ body{
     }
 
     /*Carousel*/
-    .peliculas-recomendadas .carousel{
+    /* .peliculas-recomendadas .carousel{
         overflow: visible;
     }
     .peliculas-recomendadas .carousel .peliculas-group{
@@ -246,6 +247,6 @@ body{
     .peliculas-recomendadas .flecha-izquierda,
     .peliculas-recomendadas .flecha-derecha{
         display: none;
-    }
+    } */
 
 }

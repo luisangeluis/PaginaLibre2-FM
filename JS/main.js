@@ -72,7 +72,6 @@ for (let i = 0; i < numeroPaginas; i++) {
     });
 
 }
-
 //Efecto hover de las peliculas
 
 // const peliculasGroup = document.querySelector('.peliculas-group');
@@ -104,9 +103,66 @@ fila.addEventListener('mouseleave',()=>{
 
 // peliculas.addEventListener('click',()=>{
 
+//Hacer el carousel mas responsivo
+// if(fila.offsetWidth<=800){
+    
+
+//     for(let i =0; i<peliculas.length;i++){
+
+//         peliculas[i].style.minWidth='33.3%';
+
+//     }
+// }else{
+//     for(let i =0; i<peliculas.length;i++){
+
+//         peliculas[i].style.minWidth='20%';
+
+//     }
+// }
+acomodarPeliculasRecomendadas();
+
+window.addEventListener('resize',()=>{
+
+    // if(fila.offsetWidth<=800){
+    //     console.log('hola');
+    //     console.log(fila.offsetWidth);
+
+    //     for(let i =0; i<peliculas.length;i++){
+
+    //         peliculas[i].style.minWidth='33.3%';
+
+    //     }
+    // }else{
+    //     for(let i =0; i<peliculas.length;i++){
+
+    //         peliculas[i].style.minWidth='20%';
+
+    //     }
+    // }
+
+    acomodarPeliculasRecomendadas();
 
 
+});
 
+function acomodarPeliculasRecomendadas(){
+    if(fila.offsetWidth<=800){
+        console.log('hola');
+        console.log(fila.offsetWidth);
+
+        for(let i =0; i<peliculas.length;i++){
+
+            peliculas[i].style.minWidth='33.3%';
+
+        }
+    }else{
+        for(let i =0; i<peliculas.length;i++){
+
+            peliculas[i].style.minWidth='20%';
+
+        }
+    }
+}
 
 
 
